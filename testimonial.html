@@ -169,23 +169,31 @@
       }
 
       .navigation-buttons {
-        display: flex;
-        gap: 0.5rem;
-        justify-content: center;
-      }
+  display: flex;
+  gap: 0.5rem;
+  justify-content: center;
+  margin-top: 1rem;
+}
 
-      .nav-button {
-        width: 12px;
-        height: 12px;
-        background-color: #ddd;
-        border: none;
-        border-radius: 50%;
-        cursor: pointer;
-      }
+.nav-button {
+  width: 12px;
+  height: 12px;
+  background-color: #ddd;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
 
-      .nav-button.active {
-        background-color: #ff6f61;
-      }
+.nav-button.active {
+  background-color: #ff6f61;
+  transform: scale(1.2); /* Aumenta el tamaño del botón activo */
+}
+
+.nav-button:hover {
+  background-color: #ff8f81;
+}
+
     </style>
 
     <div class="carousel">
@@ -209,6 +217,7 @@
           <button class="nav-button active" id="prevButton"></button>
           <button class="nav-button" id="nextButton"></button>
         </div>
+        
       </div>
     </div>
   </template>

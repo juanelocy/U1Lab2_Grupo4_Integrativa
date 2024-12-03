@@ -52,28 +52,40 @@ class TestimonialCarousel extends HTMLElement {
     // Inicializar el testimonio
     this.updateTestimonial();
   }
+ // Mostrar testimonio anterior
+ showPrevious() {
+  this.currentIndex = (this.currentIndex - 1 + this.testimonials.length) % this.testimonials.length;
+  this.updateTestimonial();
+  this.updateNavButtons();
+}
 
-  // Mostrar testimonio anterior
-  showPrevious() {
-    this.currentIndex = (this.currentIndex - 1 + this.testimonials.length) % this.testimonials.length;
-    this.updateTestimonial();
-  }
+// Mostrar siguiente testimonio
+showNext() {
+  this.currentIndex = (this.currentIndex + 1) % this.testimonials.length;
+  this.updateTestimonial();
+  this.updateNavButtons();
+}
 
-  // Mostrar siguiente testimonio
-  showNext() {
-    this.currentIndex = (this.currentIndex + 1) % this.testimonials.length;
-    this.updateTestimonial();
-  }
+// Actualizar el testimonio en pantalla
+updateTestimonial() {
+  const testimonial = this.testimonials[this.currentIndex];
+  this.testimonialImage.src = testimonial.img;
+  this.testimonialText.textContent = `"${testimonial.text}"`;
+  this.clientAvatar.src = testimonial.avatar;
+  this.clientName.textContent = testimonial.name;
+  this.clientProfession.textContent = testimonial.profession;
+}
 
-  // Actualizar el testimonio en pantalla
-  updateTestimonial() {
-    const testimonial = this.testimonials[this.currentIndex];
-    this.testimonialImage.src = testimonial.img;
-    this.testimonialText.textContent = `"${testimonial.text}"`;
-    this.clientAvatar.src = testimonial.avatar;
-    this.clientName.textContent = testimonial.name;
-    this.clientProfession.textContent = testimonial.profession;
-  }
+// Actualizar el estado de los botones de navegación
+updateNavButtons() {
+  this.navButtons.forEach((button, index) => {
+    if (index === this.currentIndex) {
+      button.classList.add('active');
+    } else {
+      button.classList.remove('active');
+    }
+  });
+}
 }
 
 // Registrar el componente

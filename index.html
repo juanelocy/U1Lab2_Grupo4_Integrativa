@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Iphone</title>
+    <script src="phone.js" defer></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f5f5f5;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+        header {
+            background-color: #007bff;
+            color: white;
+            padding: 20px 0;
+            margin-bottom: 20px;
+            position: relative;
+        }
+        header h1 {
+            margin: 0;
+            font-size: 2rem;
+        }
+        .catalog {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+            padding: 20px;
+        }
+        .apple-btn {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            width: 60px;
+            height: 60px;
+            background-image: url('apple-logo.png');
+            background-size: cover;
+            background-color: transparent;
+            border: none;
+            cursor: pointer;
+        }
+        .apple-btn:hover {
+            opacity: 0.8;
+        }
+    </style>
+</head>
+<body>
+    
+    <section class="catalog">
+        <phone-card 
+            title="iPhone 14 Pro Max"
+            price="$899"
+            description="Pantalla Super Retina XDR de 6.7 pulgadas, chip A16 Bionic y cámara de 48 MP."
+            img="1.jpg"
+        ></phone-card>
+      
+    </section>
+</body>
+</html>

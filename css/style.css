@@ -9528,7 +9528,16 @@ h6,
   z-index: 11;
   animation: action 1s infinite alternate;
 }
-
+.team-card {
+  min-height: 300px; /* Altura mínima */
+  border: 1px solid #ddd; /* Opcional: estilo de borde */
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Opcional: sombra */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; /* Distribuir espacio uniformemente */
+  text-align: center;
+  padding: 15px; /* Espaciado interno */
+}
 @keyframes action {
   0% {
     transform: translateY(0);

@@ -44,20 +44,19 @@ class PhoneCard extends HTMLElement {
                     cursor: pointer;
                     text-decoration: none;
                 }
+                .btn:hover {
+                    background-color: #0056b3;
+                }
             </style>
             <div class="card">
                 <img>
                 <h3></h3>
                 <p class="price"></p>
                 <p class="description"></p>
-                
             </div>
         `;
 
-
         shadow.appendChild(template.content.cloneNode(true));
-
-        
         this.render();
     }
 
@@ -76,5 +75,4 @@ class PhoneCard extends HTMLElement {
         description.textContent = this.getAttribute('description');
     }
 }
-
-customElements.define('phone-card', PhoneCard);
+window.customElements.define('phone-card', PhoneCard);

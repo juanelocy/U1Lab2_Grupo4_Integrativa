@@ -118,7 +118,7 @@
       .image-container img {
         width: 100%;
         height: auto;
-        max-width: 710px;
+        max-width: 716px;
         border-radius: 8px;
         object-fit: cover;
       }
@@ -226,61 +226,66 @@
 <br>
   <!-- Contenedor del footer -->
 <div id="footer-container"></div>
-<br><br>
+
 <!-- HTML Template del footer -->
-<template id="footer-template">
-    <footer class="bg-dark text-white pt-5 pb-3">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-4 col-md-6 mb-4">
-                    <h5 class="text-uppercase">Sobre Nosotros</h5>
-                    <p>Somos una tienda de tecnología enfocada en ofrecer los mejores productos Apple, con servicios de reparación y atención al cliente excepcional.</p>
-                </div>
-                <div class="col-lg-4 col-md-6 mb-4">
-                    <h5 class="text-uppercase">Enlaces</h5>
-                    <ul class="list-unstyled">
-                        <li><a href="index.html" class="text-white">Inicio</a></li>
-                        <li><a href="about.html" class="text-white">Productos</a></li>
-                        <li><a href="service.html" class="text-white">Servicios</a></li>
-                        <li><a href="testimonial.html" class="text-white">Testimonial</a></li>
-                        <li><a href="contact.html" class="text-white">Desarrolladores</a></li>
-                    </ul>
-                </div>
-                <div class="col-lg-4 col-md-6 mb-4">
-                    <h5 class="text-uppercase">Contáctanos</h5>
-                    <p><i class="fas fa-map-marker-alt"></i> Dirección: Universidad de las Fuerzas Armadas ESPE</p>
-                    <p><i class="fas fa-phone-alt"></i> Teléfono: (123) 456-7890</p>
-                    <p><i class="fas fa-envelope"></i> Email: contacto@applestore.com</p>
-                </div>
-            </div>
-            <div class="text-center py-3">
-                <p>&copy; 2024 Apple Store. Todos los derechos reservados.</p>
-            </div>
-        </div>
-    </footer>
-</template>
+ <!-- Contenedor del footer -->
+ <div id="footer-container"></div>
 
-<!-- Script para cargar el footer desde el template -->
-<script>
-    document.addEventListener('DOMContentLoaded', () => {
-        const footerContainer = document.getElementById('footer-container');
-        const footerTemplate = document.getElementById('footer-template').content.cloneNode(true);
-        footerContainer.appendChild(footerTemplate);
-    });
-</script>
-  
-  <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
-  <script src="lib/easing/easing.min.js"></script>
-  <script src="lib/waypoints/waypoints.min.js"></script>
-  <script src="lib/counterup/counterup.min.js"></script>
-  <script src="lib/tempusdominus/js/moment.min.js"></script>
-  <script src="lib/tempusdominus/js/moment-timezone.min.js"></script>
-  <script src="lib/tempusdominus/js/tempusdominus-bootstrap-4.min.js"></script>
+ <!-- HTML Template del footer -->
+ <template id="footer-template">
+     <footer class="bg-dark text-white pt-5 pb-3">
+         <div class="container">
+             <div class="row">
+                 <div class="col-lg-4 col-md-6 mb-4">
+                     <h5 class="text-uppercase">Sobre Nosotros</h5>
+                     <p>Somos una tienda de tecnología enfocada en ofrecer los mejores productos Apple, con servicios
+                         de reparación y atención al cliente excepcional.</p>
+                 </div>
+                 <div class="col-lg-4 col-md-6 mb-4">
+                     <h5 class="text-uppercase">Enlaces</h5>
+                     <ul class="list-unstyled">
+                         <li><a href="index.html" class="text-white">Inicio</a></li>
+                         <li><a href="about.html" class="text-white">Productos</a></li>
+                         <li><a href="service.html" class="text-white">Servicios</a></li>
+                         <li><a href="testimonial.html" class="text-white">Testimonial</a></li>
+                         <li><a href="contact.html" class="text-white">Desarrolladores</a></li>
+                     </ul>
+                 </div>
+                 <div class="col-lg-4 col-md-6 mb-4">
+                     <h5 class="text-uppercase">Contáctanos</h5>
+                     <p><i class="fas fa-map-marker-alt"></i> Dirección: Universidad de las Fuerzas Armadas ESPE</p>
+                     <p><i class="fas fa-phone-alt"></i> Teléfono: (123) 456-7890</p>
+                     <p><i class="fas fa-envelope"></i> Email: contacto@applestore.com</p>
+                 </div>
+             </div>
+             <div class="text-center py-3">
+                 <p>&copy; 2024 Apple Store. Todos los derechos reservados.</p>
+             </div>
+         </div>
+     </footer>
+ </template>
 
-  <script src="mail/jqBootstrapValidation.min.js"></script>
-  <script src="mail/contact.js"></script>
+ <!-- Script para cargar el footer desde el template -->
+ <script>
+     document.addEventListener('DOMContentLoaded', () => {
+         const footerContainer = document.getElementById('footer-container');
+         const footerTemplate = document.getElementById('footer-template').content.cloneNode(true);
+         footerContainer.appendChild(footerTemplate);
+     });
+ </script>
 
-  <script src="js/main.js"></script>
+ <a href="#" class="btn btn-lg btn-primary back-to-top"><i class="fa fa-angle-double-up"></i></a>
+
+ <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+ <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
+ <script src="lib/easing/easing.min.js"></script>
+ <script src="lib/waypoints/waypoints.min.js"></script>
+ <script src="lib/counterup/counterup.min.js"></script>
+ <script src="lib/tempusdominus/js/moment.min.js"></script>
+ <script src="lib/tempusdominus/js/moment-timezone.min.js"></script>
+ <script src="lib/tempusdominus/js/tempusdominus-bootstrap-4.min.js"></script>
+ <script src="mail/jqBootstrapValidation.min.js"></script>
+ <script src="mail/contact.js"></script>
+ <script src="js/main.js"></script>
 </body>
 </html>

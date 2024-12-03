@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Testimonial Carousel</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Arial', sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background-color: #f8f8f8;
+    }
+
+    testimonial-carousel {
+      width: 90%;
+      max-width: 1000px;
+    }
+  </style>
+</head>
+<body>
+  <!-- Componente personalizado -->
+  <testimonial-carousel></testimonial-carousel>
+
+  <!-- Template -->
+  <template id="testimonialTemplate">
+    <style>
+      .carousel {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        background-color: white;
+        padding: 2rem;
+        border-radius: 10px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        gap: 2rem;
+      }
+
+      .image-container {
+        flex: 1;
+      }
+
+      .image-container img {
+        width: 100%;
+        height: auto;
+        max-width: 400px;
+        border-radius: 8px;
+        object-fit: cover;
+      }
+
+      .content-container {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 1rem;
+      }
+
+      h3 {
+        color: #ff6f61;
+        text-transform: uppercase;
+        font-size: 14px;
+        margin: 0;
+      }
+
+      h1 {
+        font-size: 28px;
+        margin: 0;
+        color: #333;
+      }
+
+      .client-info {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+      }
+
+      .client-info img {
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        object-fit: cover;
+      }
+
+      .client-details {
+        font-size: 14px;
+        color: gray;
+      }
+
+      .testimonial-text {
+        font-size: 16px;
+        line-height: 1.5;
+        color: #555;
+      }
+
+      .navigation-buttons {
+        display: flex;
+        gap: 0.5rem;
+        justify-content: center;
+      }
+
+      .nav-button {
+        width: 12px;
+        height: 12px;
+        background-color: #ddd;
+        border: none;
+        border-radius: 50%;
+        cursor: pointer;
+      }
+
+      .nav-button.active {
+        background-color: #ff6f61;
+      }
+    </style>
+
+    <div class="carousel">
+      <div class="image-container">
+        <img id="testimonialImage" src="IPHONE.png" alt="Testimonial">
+      </div>
+      <div class="content-container">
+        <h3>Testimonial</h3>
+        <h1>What Our Clients Say!</h1>
+        <div class="client-info">
+          <img id="clientAvatar" src="IPHONE.png" alt="Client">
+          <div class="client-details">
+            <div id="clientName">Client Name</div>
+            <div id="clientProfession">Profession</div>
+          </div>
+        </div>
+        <p class="testimonial-text" id="testimonialText">
+          Excelente servicio y calidad.
+        </p>
+        <div class="navigation-buttons">
+          <button class="nav-button active" id="prevButton"></button>
+          <button class="nav-button" id="nextButton"></button>
+        </div>
+      </div>
+    </div>
+  </template>
+
+  <script src="test.js"></script>
+</body>
+</html>

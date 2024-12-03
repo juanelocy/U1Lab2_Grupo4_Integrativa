@@ -71,10 +71,10 @@
         </button>
         <div class="collapse navbar-collapse justify-content-between px-lg-3" id="navbarCollapse">
           <div class="navbar-nav m-auto py-0">
-            <a href="index.html" class="nav-item nav-link active">Inicio</a>
+            <a href="index.html" class="nav-item nav-link ">Inicio</a>
             <a href="about.html" class="nav-item nav-link">Productos</a>
             <a href="service.html" class="nav-item nav-link">Servicios</a>
-            <a href="testimonial.html" class="nav-item nav-link">Testimonial</a>
+            <a href="testimonial.html" class="nav-item nav-link active">Testimonios</a>
             <a href="contact.html" class="nav-item nav-link">Desarrolladores</a>
           </div>
         </div>
@@ -184,8 +184,8 @@
         <img id="testimonialImage" src="IPHONE.png" alt="Testimonial">
       </div>
       <div class="content-container">
-        <h3>Testimonial</h3>
-        <h1>What Our Clients Say!</h1>
+        <h3>Testimonios</h3>
+        <h1>Lo que dicen nuestros clientes!</h1>
         <div class="client-info">
           <img id="clientAvatar" src="IPHONE.png" alt="Client">
           <div class="client-details">
@@ -206,7 +206,50 @@
 
   <script src="test.js"></script>
 
+  <!-- Contenedor del footer -->
+<div id="footer-container"></div>
+<br><br>
+<!-- HTML Template del footer -->
+<template id="footer-template">
+    <footer class="bg-dark text-white pt-5 pb-3">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <h5 class="text-uppercase">Sobre Nosotros</h5>
+                    <p>Somos una tienda de tecnología enfocada en ofrecer los mejores productos Apple, con servicios de reparación y atención al cliente excepcional.</p>
+                </div>
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <h5 class="text-uppercase">Enlaces</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="index.html" class="text-white">Inicio</a></li>
+                        <li><a href="about.html" class="text-white">Productos</a></li>
+                        <li><a href="service.html" class="text-white">Servicios</a></li>
+                        <li><a href="testimonial.html" class="text-white">Testimonial</a></li>
+                        <li><a href="contact.html" class="text-white">Desarrolladores</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <h5 class="text-uppercase">Contáctanos</h5>
+                    <p><i class="fas fa-map-marker-alt"></i> Dirección: Universidad de las Fuerzas Armadas ESPE</p>
+                    <p><i class="fas fa-phone-alt"></i> Teléfono: (123) 456-7890</p>
+                    <p><i class="fas fa-envelope"></i> Email: contacto@applestore.com</p>
+                </div>
+            </div>
+            <div class="text-center py-3">
+                <p>&copy; 2024 Apple Store. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+</template>
 
+<!-- Script para cargar el footer desde el template -->
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        const footerContainer = document.getElementById('footer-container');
+        const footerTemplate = document.getElementById('footer-template').content.cloneNode(true);
+        footerContainer.appendChild(footerTemplate);
+    });
+</script>
   
   <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>

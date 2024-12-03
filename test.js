@@ -13,21 +13,21 @@ class TestimonialCarousel extends HTMLElement {
     // Referencias a elementos
     this.testimonials = [
       {
-        img: 'IPHONE.png',
+        img: 'img/imagen.jpg',
         text: 'Excelente servicio y calidad.',
-        avatar: 'IPHONE.png',
+        avatar: 'img/persona1.jpg',
         name: 'María Pérez',
         profession: 'Diseñadora Gráfica',
       },
       {
-        img: 'IPHONE.png',
+        img: 'img/fondo1.jpg',
         text: 'Me encantó la atención al cliente.',
-        avatar: 'IPHONE.png',
+        avatar: 'img/persona3.jpg',
         name: 'Carlos Gómez',
         profession: 'Programador',
       },
       {
-        img: 'IPHONE.png',
+        img: 'img/fonfo.jpg',
         text: 'Recomendado al 100%.',
         avatar: 'IPHONE.png',
         name: 'Ana Torres',

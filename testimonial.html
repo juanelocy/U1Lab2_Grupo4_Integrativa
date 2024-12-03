@@ -24,7 +24,7 @@
     } */
 
     testimonial-carousel {
-      width: 90%;
+      width: 50%;
       max-width: 1000px;
     }
   </style> 
@@ -91,26 +91,34 @@
   <!-- Template -->
   <template id="testimonialTemplate">
     <style>
-      .carousel {
-      
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        background-color: white;
-        padding: 2rem;
-        border-radius: 10px;
-        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-        gap: 2rem;
-      }
+     .carousel {
+    width: 80%; /* Establece un ancho del 80% de la pantalla, puedes ajustarlo a tu preferencia */
+    height: 400px; /* Establece una altura específica en píxeles, ajusta el valor según lo necesites */
+    
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: white;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    gap: 2rem;
+    margin: 0 auto; /* Centra el carrusel en la pantalla */
+}
 
       .image-container {
         flex: 1;
+        
+    width: 100%; /* Esto hace que la imagen ocupe todo el ancho del contenedor */
+    height: auto; /* Mantiene la proporción de la imagen */
+
+
       }
 
       .image-container img {
         width: 100%;
         height: auto;
-        max-width: 400px;
+        max-width: 710px;
         border-radius: 8px;
         object-fit: cover;
       }
@@ -179,7 +187,7 @@
         background-color: #ff6f61;
       }
     </style>
-<br><br><br><br>
+
     <div class="carousel">
       <div class="image-container">
         <img id="testimonialImage" src="IPHONE.png" alt="Testimonial">
@@ -206,7 +214,7 @@
   </template>
 
   <script src="test.js"></script>
-<br><br><br><br><br><br>
+<br>
   <!-- Contenedor del footer -->
 <div id="footer-container"></div>
 <br><br>

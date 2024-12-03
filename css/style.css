@@ -68,6 +68,19 @@ body {
   outline: 0 !important;
 }
 
+/* Asegurarse de que el carrusel cubra toda el área del contenedor */
+#carouselExampleControls {
+  width: 100%;
+  height: 100%;
+}
+
+/* Opcional: Ajustes adicionales para las imágenes del carrusel */
+.carousel-item img {
+  width: 100%;
+  height: 400px;
+  object-fit: cover; /* Para mantener el aspecto correcto de las imágenes */
+}
+
 hr {
   box-sizing: content-box;
   height: 0;

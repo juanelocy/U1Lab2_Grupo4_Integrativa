@@ -1,8 +1,6 @@
-// Obtener el template de la navbar
-const template = document.getElementById('navbar-template');
-const navbarComponent = document.querySelector('navbar-component');
+  // Obtener el template del carrusel
+  const carouselTemplate = document.getElementById('carousel-template');
+  const carouselContainer = document.getElementById('carousel-container');
 
-// Cuando el componente es insertado en el DOM, clonar el template y agregarlo
-if (template && navbarComponent) {
-    navbarComponent.innerHTML = template.innerHTML;
-}
+  // Clonar el contenido del template y añadirlo al contenedor
+  carouselContainer.appendChild(carouselTemplate.content.cloneNode(true));

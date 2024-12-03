@@ -1,6 +1,7 @@
 class PhoneCard extends HTMLElement {
     constructor() {
         super();
+
         const shadow = this.attachShadow({ mode: 'open' });
         const template = document.createElement('template');
         template.innerHTML = `
@@ -38,7 +39,7 @@ class PhoneCard extends HTMLElement {
                     padding: 10px 20px;
                     font-size: 1em;
                     color: white;
-                    background-color: #007bff;
+                    background-color: #f56649;
                     border: none;
                     border-radius: 5px;
                     cursor: pointer;
@@ -53,10 +54,14 @@ class PhoneCard extends HTMLElement {
                 <h3></h3>
                 <p class="price"></p>
                 <p class="description"></p>
+                <button class="btn">Ver más</button>
             </div>
         `;
 
+        // Clonar  el template al shadow DOM
         shadow.appendChild(template.content.cloneNode(true));
+
+        // atributos
         this.render();
     }
 
@@ -68,11 +73,13 @@ class PhoneCard extends HTMLElement {
         const price = shadow.querySelector('.price');
         const description = shadow.querySelector('.description');
 
-        img.src = this.getAttribute('img');
-        img.alt = this.getAttribute('title');
-        title.textContent = this.getAttribute('title');
-        price.textContent = this.getAttribute('price');
-        description.textContent = this.getAttribute('description');
+        img.src = this.getAttribute('img') ;
+        img.alt = this.getAttribute('title') ;
+        title.textContent = this.getAttribute('title') ;
+        price.textContent = this.getAttribute('price') ;
+        description.textContent = this.getAttribute('description') ;
     }
 }
+
+
 window.customElements.define('phone-card', PhoneCard);

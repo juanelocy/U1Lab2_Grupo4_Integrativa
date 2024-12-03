@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Template Example</title>
+    <script src="my-tag-template.js" defer></script>
+    <template id="my-tag-template">
+        <style>
+            .card {
+                border-radius: 10px;
+                box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+                overflow: hidden;
+                margin: 20px;
+                width: 300px;
+                padding: 20px;
+                display: inline-block;
+            }
+            .card h3 {
+                font-size: 1.5em;
+                margin-bottom: 10px;
+            }
+            .card img {
+                width: 100%;
+                border-radius: 5px;
+            }
+            .card p {
+                margin-bottom: 10px;
+            }
+            .tags {
+                margin-bottom: 10px;
+            }
+            .tag {
+                color: #000;
+                border-radius: 3px;
+                padding: 3px 6px;
+                margin-right: 5px;
+                font-size: 0.8em;
+            }
+        </style>
+        <div class="card">
+            <h3></h3>
+            <img>
+            <p></p>
+            <div class="tags"></div>
+        </div>
+    </template>
+</head>
+<body>
+    <my-tag 
+        title="Plantas" 
+        Tipo="Trebol 4 hojas" 
+        img="1.jpg"
+        Nombre="Trebol" 
+        Cientifico="Trifolium repens" 
+        Tipo="4 hojas" 
+        Color="Verde" 
+        background-color="#fff1"
+    ></my-tag>
+</body>
+</html>

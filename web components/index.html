@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Web Component con Shadow DOM, HTML Templates y ES Modules</title>
+</head>
+<body>
+
+  <!-- Este es el lugar donde el Custom Element será usado -->
+  <hola></hola>
+
+  <!-- Definición del template HTML -->
+  <template id="mi-template">
+    <style>
+      h1 {
+        color: blue;
+      }
+    </style>
+    <h1>¡Este es un Template HTML dentro de un Web Component!</h1>
+  </template>
+
+  <!-- Usamos el módulo ES para cargar el código JavaScript -->
+  <script type="module">
+    // 1. Definición de un Custom Element
+    class Hola extends HTMLElement {
+      
+      constructor() {
+        super();
+        // 2. Crear un Shadow DOM dentro del Custom Element
+        this.attachShadow({ mode: 'open' });
+      }
+
+      connectedCallback() {
+        // 3. Usar un Template HTML dentro del Shadow DOM
+        const template = document.getElementById('mi-template');
+        const clone = template.content.cloneNode(true);
+        this.shadowRoot.appendChild(clone);
+
+        // 4. Usar una función exportada desde un módulo ES (esto es solo un ejemplo)
+        import { saludo } from './module.js';  // Este módulo se carga dinámicamente.
+        console.log(saludo('Adriana'));
+      }
+    }
+
+    // 5. Registrar el Custom Element
+    customElements.define('hola', Hola);
+  </script>
+
+  <!-- Agregamos un pequeño script con la funcionalidad exportada -->
+  <script type="module">
+    // Este archivo actúa como un módulo ES (exporta una función)
+
+    // 6. ES Modules: Exportamos una función
+    export function saludo(nombre) {
+      return `¡Hola, ${nombre}! Este mensaje es desde un módulo ES.`;
+    }
+  </script>
+
+</body>
+</html>

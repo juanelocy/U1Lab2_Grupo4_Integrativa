@@ -107,7 +107,7 @@ body {
   transition: .5s;
 }
 .team:hover {
-  box-shadow: 0 0 10px rgba(0, 0, 0, .3);
+  box-shadow: 0 0 10px rgba(0, 0, 0, .8);
 }
 .team .team-text {
   transition: .5s;
@@ -121,6 +121,10 @@ body {
   opacity: 0;
   transition: .5s;
   background: rgba(0, 0, 0, .7);
+}
+
+.team-social p{
+  color: #fff;
 }
 .team:hover .team-social {
   opacity: 1;

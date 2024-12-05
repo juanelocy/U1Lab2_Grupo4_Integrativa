@@ -67,18 +67,69 @@ body {
 [tabindex="-1"]:focus:not(:focus-visible) {
   outline: 0 !important;
 }
+.carousel-caption {
+  background: rgba(0, 0, 0, 0.9);
+  padding: 20px;
+  border-radius: 10px;
+  transition: all 0.5s ease;
+}
+.carousel-item.active .carousel-caption {
+  animation: fadeInUp 1s;
+}
+@keyframes fadeInUp {
+  from {
+      opacity: 0;
+      transform: translate3d(0, 100%, 0);
+  }
+  to {
+      opacity: 1;
+      transform: translate3d(0, 0, 0);
+  }
+}
+.carousel-caption h5 {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: #fff;
+}
+.carousel-caption p {
+  font-size: 1.2rem;
+}
 
-/* Asegurarse de que el carrusel cubra toda el área del contenedor */
+/* Asegurarse de que el carrusel cubra toda el área del contenedor
 #carouselExampleControls {
   width: 100%;
   height: 100%;
 }
 
 /* Opcional: Ajustes adicionales para las imágenes del carrusel */
-.carousel-item img {
+ .carousel-item img {
   width: 100%;
   height: 600px;
   object-fit: cover; /* Para mantener el aspecto correcto de las imágenes */
+ } 
+
+.team {
+  transition: .5s;
+}
+.team:hover {
+  box-shadow: 0 0 30px rgba(0, 0, 0, .3);
+}
+.team .team-text {
+  transition: .5s;
+}
+.team:hover .team-text {
+  background:#F9A392!important;
+}
+.team .team-social {
+  top: 0;
+  left: 0;
+  opacity: 0;
+  transition: .5s;
+  background: rgba(0, 0, 0, .7);
+}
+.team:hover .team-social {
+  opacity: 1;
 }
 
 hr {

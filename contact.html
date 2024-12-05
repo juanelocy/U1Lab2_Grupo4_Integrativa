@@ -79,7 +79,7 @@
             <h3 class="text-white display-3 mb-4">Desarrolladores</h3>
         </div>
     </div>
-    
+
     <!-- separador -->
     <div class="container-fluid bg-light d-none d-lg-block">
         <div class="row py-2 px-lg-5" style="height: 75px;">
@@ -141,15 +141,6 @@
             </div>
         </div>
     </template>
-
-    <!-- script para cargar el mapa desde el template -->
-    <script>
-        document.addEventListener('DOMContentLoaded', () => {
-            const mapContainer = document.getElementById('map-container');
-            const mapTemplate = document.getElementById('map-template').content.cloneNode(true);
-            mapContainer.appendChild(mapTemplate);
-        });
-    </script>
 
     <!-- Sección de tarjetas de presentación -->
     <div class="container py-5">
@@ -255,13 +246,7 @@
     </template>
 
     <!-- Script para cargar el footer desde el template -->
-    <script>
-        document.addEventListener('DOMContentLoaded', () => {
-            const footerContainer = document.getElementById('footer-container');
-            const footerTemplate = document.getElementById('footer-template').content.cloneNode(true);
-            footerContainer.appendChild(footerTemplate);
-        });
-    </script>
+    <script src="contact.js"></script>
 
     <a href="#" class="btn btn-lg btn-primary back-to-top"><i class="fa fa-angle-double-up"></i></a>
 

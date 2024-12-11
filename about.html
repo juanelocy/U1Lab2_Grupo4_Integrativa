@@ -4,30 +4,20 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Apple Store</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+  <link href="lib/animate/animate.min.css" rel="stylesheet">
+  <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+  <link href="lib/tempusdominus/css/tempusdominus-bootstrap-4.min.css" rel="stylesheet" />
+  <link href="css/style.css" rel="stylesheet">
     <script src="js/phone.js" defer></script>
     <script src="js/mac.js" defer></script>
     <script src="js/airpods.js" defer></script>
     <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #f5f5f5;
-            margin: 0;
-            padding: 0;
-            text-align: center;
-        }
-        header {
-            background-color: #F9A392;
-            color: white;
-            padding: 20px 0;
-            margin-bottom: 20px;
-            position: relative;
-        }
-        header h1 {
-            margin: 0;
-            font-size: 2rem;
-        }
         .buttons {
             margin: 20px 0;
+            text-align: center;
         }
         .buttons button {
             margin: 0 10px;
@@ -52,9 +42,17 @@
     </style>
 </head>
 <body>
-    <header>
-        <h1>Apple Store</h1>
-    </header>
+    <!-- encabezado reutilizable con html template -->
+    <header id="navbar-container"></header>
+    <script src="js/encabezado.js"></script>
+
+    <!-- Cabecera -->
+    <div class="jumbotron jumbotron-fluid bg-jumbotron" style="margin-bottom: 0px;">
+        <div class="container text-center py-5">
+            <h3 class="text-white display-3 mb-4">Productos</h3>
+        </div>
+    </div>
+
     <div class="buttons">
         <button onclick="showSection('iphone')">iPhone</button>
         <button onclick="showSection('mac')">Mac</button>
@@ -154,5 +152,9 @@
             }
         }
     </script>
+
+     <!-- footer reutilizable con html template -->
+ <div id="footer-container"></div>
+ <script src="js/footer.js"></script>
 </body>
 </html>

@@ -16,6 +16,7 @@
     <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
     <link href="lib/tempusdominus/css/tempusdominus-bootstrap-4.min.css" rel="stylesheet" />
     <link href="css/style.css" rel="stylesheet">
+     <script src="inicio.js"></script>
 </head>
 
 <body>
@@ -126,8 +127,14 @@
 
     <!-- Contenedor del Carrusel -->
     <div id="carousel-container"></div>
-    <!-- se llama al javascript para que aparezca el html template -->
-    <script src="inicio.js"></script>
+    <script>
+        // Cargar el template de Productos Destacados
+        document.addEventListener('DOMContentLoaded', () => {
+            const carouselcontainer = document.getElementById('carousel-container');
+            const carouseltemplate = document.getElementById('carousel-template').content.cloneNode(true);
+            carouselcontainer.appendChild(carouseltemplate);
+        });
+    </script>
 
     <!-- Botón flotante para ir al principio -->
     <a href="#" class="btn btn-lg btn-primary back-to-top"><i class="fa fa-angle-double-up"></i></a>
@@ -220,6 +227,9 @@
             featuredProductsContainer.appendChild(featuredProductsTemplate);
         });
     </script>
+
+<apple-sales-section></apple-sales-section>
+
 
     <!-- Contenedor del footer -->
     <div id="footer-container"></div>

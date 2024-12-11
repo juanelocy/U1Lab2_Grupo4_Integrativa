@@ -1,31 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="utf-8">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Apple Store</title>
-    <meta content="width=device-width, initial-scale=1.0" name="viewport">
-    <meta content="Free HTML Templates" name="keywords">
-    <meta content="Free HTML Templates" name="description">
-
-    <link href="img/favicon.ico" rel="icon">
-
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
-    <link href="lib/animate/animate.min.css" rel="stylesheet">
-    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
-    <link href="lib/tempusdominus/css/tempusdominus-bootstrap-4.min.css" rel="stylesheet" />
-    <link href="css/style.css" rel="stylesheet">
-    <script src="phone.js" defer></script>
+    <script src="js/phone.js" defer></script>
+    <script src="js/mac.js" defer></script>
+    <script src="js/airpods.js" defer></script>
     <style>
         body {
+            font-family: Arial, sans-serif;
             background-color: #f5f5f5;
             margin: 0;
             padding: 0;
             text-align: center;
         }
-
         header {
             background-color: #F9A392;
             color: white;
@@ -33,12 +22,26 @@
             margin-bottom: 20px;
             position: relative;
         }
-
         header h1 {
             margin: 0;
             font-size: 2rem;
         }
-
+        .buttons {
+            margin: 20px 0;
+        }
+        .buttons button {
+            margin: 0 10px;
+            padding: 10px 20px;
+            font-size: 1rem;
+            color: white;
+            background-color: #F9A392;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .buttons button:hover {
+            background-color: #D87563;
+        }
         .catalog {
             display: flex;
             flex-wrap: wrap;
@@ -46,159 +49,97 @@
             gap: 20px;
             padding: 20px;
         }
-
-        .apple-btn {
-            position: absolute;
-            top: 10px;
-            left: 10px;
-            width: 60px;
-            height: 60px;
-            background-image: url('apple-logo.png');
-            background-size: cover;
-            background-color: transparent;
-            border: none;
-            cursor: pointer;
-        }
-
-        .apple-btn:hover {
-            opacity: 0.8;
-        }
     </style>
 </head>
-
 <body>
-    <!-- Encabezado -->
-    <template id="navbar-template">
-        <div class="container-fluid bg-light d-none d-lg-block">
-            <div class="row py-2 px-lg-5">
-                <div class="col-lg-6 text-left mb-2 mb-lg-0">
-                    <div class="d-inline-flex align-items-center">
-                        <small><i class="bi bi-building-fill"></i>Universidad de las Fuerzas Armadas ESPE</small>
-                        <small class="px-3">|</small>
-                        <small>Grupo 4</small>
-                    </div>
-                </div>
-                <div class="col-lg-6 text-right">
-                    <div class="d-inline-flex align-items-center">
-                        <a class="text-primary px-2" href="">
-                            <i class="fab fa-facebook-f"></i>
-                        </a>
-                        <a class="text-primary px-2" href="">
-                            <i class="fab fa-twitter"></i>
-                        </a>
-                        <a class="text-primary px-2" href="">
-                            <i class="fab fa-linkedin-in"></i>
-                        </a>
-                        <a class="text-primary px-2" href="">
-                            <i class="fab fa-instagram"></i>
-                        </a>
-                        <a class="text-primary pl-2" href="">
-                            <i class="fab fa-youtube"></i>
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="container-fluid p-0">
-            <nav class="navbar navbar-expand-lg bg-white navbar-light py-3 py-lg-0 px-lg-5">
-                <a href="index.html" class="navbar-brand ml-lg-3">
-                    <h1 class="m-0 text-primary"><span class="text-dark">Apple</span> Store</h1>
-                </a>
-                <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse justify-content-between px-lg-3" id="navbarCollapse">
-                    <div class="navbar-nav m-auto py-0">
-                        <a href="index.html" class="nav-item nav-link">Inicio</a>
-                        <a href="about.html" class="nav-item nav-link active">Productos</a>
-                        <a href="service.html" class="nav-item nav-link">Servicios</a>
-                        <a href="testimonial.html" class="nav-item nav-link">Testimonios</a>
-                        <a href="contact.html" class="nav-item nav-link">Contacto</a>
-                    </div>
-                </div>
-            </nav>
-        </div>
-    </template>
-    <navbar-component></navbar-component>
-    <script src="header.js"></script>
-    <section class="catalog">
-        <phone-card title="iPhone 14 Pro Max" price="$899"
-            description="Pantalla Super Retina XDR de 6.7 pulgadas, chip A16 Bionic y cámara de 48 MP."
-            img="/img/1.jpg"></phone-card>
-        <phone-card title="iPhone 15 Pro Max" price="$1099"
-            description="Pantalla Super Retina XDR de 6.7 pulgadas, chip A16 Bionic y cámara de 48 MP."
-            img="/img/2.jpg"></phone-card>
-        <phone-card title="iPhone 16 Pro " price="$1099"
-            description="Pantalla Super Retina XDR de 6.7 pulgadas, chip A16 Bionic y cámara de 48 MP."
-            img="/img/3.jpg"></phone-card>
-        <phone-card title="iPhone 16 Pro Max" price="$1299"
-            description="Pantalla Super Retina XDR de 6.7 pulgadas, chip A16 Bionic y cámara de 48 MP."
-            img="/img/4.jpg"></phone-card>
+    <header>
+        <h1>Apple Store</h1>
+    </header>
+    <div class="buttons">
+        <button onclick="showSection('iphone')">iPhone</button>
+        <button onclick="showSection('mac')">Mac</button>
+        <button onclick="showSection('airpods')">AirPods</button>
+    </div>
+    <section id="catalog" class="catalog">
+        <!-- Las tarjetas dinámicas se mostrarán aquí -->
     </section>
 
-
-    <!-- Contenedor del footer -->
-    <div id="footer-container"></div>
-
-    <!-- HTML Template del footer -->
-    <template id="footer-template">
-        <footer class="bg-dark text-white pt-5 pb-3">
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-4 col-md-6 mb-4">
-                        <h5 class="text-uppercase">Sobre Nosotros</h5>
-                        <p>Somos una tienda de tecnología enfocada en ofrecer los mejores productos Apple, con servicios
-                            de reparación y atención al cliente excepcional.</p>
-                    </div>
-                    <div class="col-lg-4 col-md-6 mb-4">
-                        <h5 class="text-uppercase">Enlaces</h5>
-                        <ul class="list-unstyled">
-                            <li><a href="index.html" class="text-white">Inicio</a></li>
-                            <li><a href="about.html" class="text-white">Productos</a></li>
-                            <li><a href="service.html" class="text-white">Servicios</a></li>
-                            <li><a href="testimonial.html" class="text-white">Testimonial</a></li>
-                            <li><a href="contact.html" class="text-white">Desarrolladores</a></li>
-                        </ul>
-                    </div>
-                    <div class="col-lg-4 col-md-6 mb-4">
-                        <h5 class="text-uppercase">Contáctanos</h5>
-                        <p><i class="fas fa-map-marker-alt"></i> Dirección: Universidad de las Fuerzas Armadas ESPE</p>
-                        <p><i class="fas fa-phone-alt"></i> Teléfono: (123) 456-7890</p>
-                        <p><i class="fas fa-envelope"></i> Email: contacto@applestore.com</p>
-                    </div>
-                </div>
-                <div class="text-center py-3">
-                    <p>&copy; 2024 Apple Store. Todos los derechos reservados.</p>
-                </div>
-            </div>
-        </footer>
-    </template>
-
-    <!-- Script para cargar el footer desde el template -->
     <script>
-        document.addEventListener('DOMContentLoaded', () => {
-            const footerContainer = document.getElementById('footer-container');
-            const footerTemplate = document.getElementById('footer-template').content.cloneNode(true);
-            footerContainer.appendChild(footerTemplate);
-        });
+        function showSection(section) {
+            const catalog = document.getElementById('catalog');
+            catalog.innerHTML = ''; // Limpiar el contenido previo
+
+            if (section === 'iphone') {
+                catalog.innerHTML = `
+                    <phone-card 
+                        title="iPhone 14 Pro Max"
+                        price="$899"
+                        description="Pantalla Super Retina XDR de 6.7 pulgadas, chip A16 Bionic y cámara de 48 MP."
+                        img="1.jpg"
+                    ></phone-card>
+                    <phone-card 
+                        title="iPhone 15 Pro Max"
+                        price="$1099"
+                        description="Pantalla Super Retina XDR de 6.7 pulgadas, chip A16 Bionic y cámara de 48 MP."
+                        img="2.jpg"
+                    ></phone-card>
+                    <phone-card 
+                        title="iPhone 16 Pro "
+                        price="$1099"
+                        description="Pantalla Super Retina XDR de 6.7 pulgadas, chip A16 Bionic y cámara de 48 MP."
+                        img="3.jpg"
+                    ></phone-card>
+                    <phone-card 
+                        title="iPhone 16 Pro Max"
+                        price="$1299"
+                        description="Pantalla Super Retina XDR de 6.7 pulgadas, chip A16 Bionic y cámara de 48 MP."
+                        img="4.jpg"
+                    ></phone-card>
+                    <phone-card 
+                        title="iPhone 15"
+                        price="$899"
+                        description="Pantalla Super Retina XDR de 6.7 pulgadas, chip A16 Bionic y cámara de 48 MP."
+                        img="5.jpeg"
+                    ></phone-card>
+                    <phone-card 
+                        title="iPhone 15 Pro "
+                        price="$990"
+                        description="Pantalla Super Retina XDR de 6.7 pulgadas, chip A16 Bionic y cámara de 48 MP."
+                        img="6.jpeg"
+                    ></phone-card>
+                `;
+            } else if (section === 'mac') {
+                catalog.innerHTML = `
+                    <mac-card 
+                        title="MacBook Air"
+                        price="$999"
+                        description="Pantalla Retina de 13 pulgadas, chip M2 y hasta 18 horas de batería."
+                        img="mac1.jpg"
+                    ></mac-card>
+                    <mac-card 
+                        title="MacBook Pro 14”"
+                        price="$1999"
+                        description="Pantalla Liquid Retina XDR, chip M2 Pro y almacenamiento ultrarrápido."
+                        img="mac2.jpeg"
+                    ></mac-card>
+                `;
+            } else if (section === 'airpods') {
+                catalog.innerHTML = `
+                    <airpods-card 
+                        title="AirPods Pro"
+                        price="$249"
+                        description="Cancelación activa de ruido, audio espacial y resistencia al agua."
+                        img="a1.jpeg"
+                    ></airpods-card>
+                    <airpods-card 
+                        title="AirPods Max"
+                        price="$549"
+                        description="Sonido de alta fidelidad, cancelación de ruido y diseño premium."
+                        img="a2.jpeg"
+                    ></airpods-card>
+                `;
+            }
+        }
     </script>
-
-
-    <a href="#" class="btn btn-lg btn-primary back-to-top"><i class="fa fa-angle-double-up"></i></a>
-
-
-    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
-    <script src="lib/easing/easing.min.js"></script>
-    <script src="lib/waypoints/waypoints.min.js"></script>
-    <script src="lib/counterup/counterup.min.js"></script>
-    <script src="lib/tempusdominus/js/moment.min.js"></script>
-    <script src="lib/tempusdominus/js/moment-timezone.min.js"></script>
-    <script src="lib/tempusdominus/js/tempusdominus-bootstrap-4.min.js"></script>
-    <script src="mail/jqBootstrapValidation.min.js"></script>
-    <script src="mail/contact.js"></script>
-    <script src="js/main.js"></script>
-
 </body>
-
 </html>

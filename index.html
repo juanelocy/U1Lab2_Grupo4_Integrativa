@@ -17,6 +17,7 @@
     <link href="lib/tempusdominus/css/tempusdominus-bootstrap-4.min.css" rel="stylesheet" />
     <link href="css/style.css" rel="stylesheet">
     <script src="inicio.js"></script>
+    <script src="inicio2.js"></script>
 </head>
 
 <body>
@@ -32,8 +33,14 @@
     </div>
 
     <!-- separador -->
-    <div class="container-fluid bg-light d-none d-lg-block">
-        <div class="row py-2 px-lg-5" style="height: 75px;">
+    <div class="container-fluid py-2">
+        <div class="container pt-2">
+            <div class="row justify-content-center text-center">
+                <div class="col-lg-6">
+                    <h6 class="d-inline-block bg-light text-primary text-uppercase py-1 px-2">Bienvenido a Apple Store
+                    </h6>
+                </div>
+            </div>
         </div>
     </div>
 
@@ -100,8 +107,8 @@
 
     <!-- Template de Productos Destacados -->
     <template id="featured-products-template">
-        <div class="container-fluid py-5">
-            <div class="container pt-5">
+        <div class="container-fluid py-2">
+            <div class="container pt-2">
                 <div class="row justify-content-center text-center">
                     <div class="col-lg-6">
                         <h6 class="d-inline-block bg-light text-primary text-uppercase py-1 px-2">Productos Destacados
@@ -189,6 +196,7 @@
 
     <apple-sales-section></apple-sales-section>
 
+    <product-services-section></product-services-section>
 
     <!-- footer reutilizable con html template -->
     <div id="footer-container"></div>

@@ -10,7 +10,6 @@ class AppleSalesSection extends HTMLElement {
         .apple-sales-container {
           max-width: 1140px;
           margin: 0 auto;
-          padding: 3rem 1rem;
           font-family: 'Roboto', sans-serif;
           color: #333;
         }
@@ -53,7 +52,6 @@ class AppleSalesSection extends HTMLElement {
           justify-content: space-between;
         }
         .stat-box {
-          background-color: ;
           text-align: center;
           padding: 1rem;
           border-radius: 0.5rem;
@@ -91,7 +89,7 @@ class AppleSalesSection extends HTMLElement {
       <div class="apple-sales-container fade-in">
         <div class="row">
           <div class="col">
-            <img src="img/imagen.jpg" alt="Productos Apple">
+            <img src="img/c5.webp" alt="Productos Apple">
           </div>
           <div class="col">
             <h6 class="d-inline-block bg-light text-primary text-uppercase py-1 px-2">Sobre Nuestros Productos</h6>

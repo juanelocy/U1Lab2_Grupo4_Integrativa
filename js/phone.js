@@ -44,10 +44,10 @@ class PhoneCard extends HTMLElement {
     }
     render() {
         const shadow = this.shadowRoot;
-        shadow.querySelector('img').src = this.getAttribute('img') || 'placeholder.jpg';
-        shadow.querySelector('h3').textContent = this.getAttribute('title') || 'Producto Apple';
-        shadow.querySelector('.price').textContent = this.getAttribute('price') || 'Precio no disponible';
-        shadow.querySelector('.description').textContent = this.getAttribute('description') || 'Descripción no disponible';
+        shadow.querySelector('img').src = this.getAttribute('img');
+        shadow.querySelector('h3').textContent = this.getAttribute('title');
+        shadow.querySelector('.price').textContent = this.getAttribute('price');
+        shadow.querySelector('.description').textContent = this.getAttribute('description');
     }
 }
-customElements.define('phone-card', PhoneCard);
+window.customElements.define('phone-card', PhoneCard);

@@ -99,7 +99,7 @@ class ProductServicesSection extends HTMLElement {
                   <div class="service-text">
                       <h4>Asesoramiento</h4>
                       <p>Brindar asesoría sobre productos y soluciones tecnológicas, ayudando a los clientes a elegir su dispositivo.</p>
-                      <a href="#" class="btn">Comprar</a>
+                      <a href="#" class="btn">Ver mas</a>
                   </div>
               </div>
               <div class="service-card">
@@ -107,7 +107,7 @@ class ProductServicesSection extends HTMLElement {
                   <div class="service-text">
                       <h4>Servicio Técnico</h4>
                       <p>Recibir asistencia técnica para resolver problemas con sus dispositivos, incluyendo reparaciones y diagnósticos.</p>
-                      <a href="#" class="btn">Comprar</a>
+                      <a href="#" class="btn">Ver mas</a>
                   </div>
               </div>
               <div class="service-card">
@@ -115,7 +115,7 @@ class ProductServicesSection extends HTMLElement {
                   <div class="service-text">
                       <h4>Personalización</h4>
                       <p>Adaptar y configurar los productos Apple según las preferencias y necesidades individuales de cada usuario.</p>
-                      <a href="#" class="btn">Comprar</a>
+                      <a href="#" class="btn">Ver mas</a>
                   </div>
               </div>
         

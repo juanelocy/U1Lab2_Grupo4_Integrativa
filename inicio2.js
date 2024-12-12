@@ -39,7 +39,7 @@ class ProductServicesSection extends HTMLElement {
             .service-card {
                 position: relative;
                 margin: 1rem; /* Espaciado entre las tarjetas */
-                width: calc(28% - 1rem); /* Ajusta el ancho según el número de tarjetas en fila */
+                width: calc(20% - 1rem); /* Ajusta el ancho según el número de tarjetas en fila */
                 opacity: 0;
                 transform: translateY(50px);
                 transition: opacity 0.8s, transform 0.8s;

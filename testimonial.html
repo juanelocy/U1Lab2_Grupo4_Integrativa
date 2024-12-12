@@ -12,25 +12,13 @@
   <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
   <link href="lib/tempusdominus/css/tempusdominus-bootstrap-4.min.css" rel="stylesheet" />
   <link href="css/style.css" rel="stylesheet">
+  <link rel="stylesheet" href="esmodules/TestimonialCarousel.css">
   <title>Testimonial Carousel</title>
-  <style>
-    /* body {
-      margin: 0;
-      font-family: 'Arial', sans-serif;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 100vh;
-      background-color: #f8f8f8;
-    } */
 
-    testimonial-carousel {
-      width: 50%;
-      max-width: 1000px;
-    }
-  </style>
 </head>
+<style>
 
+</style>
 <body>
   <!-- encabezado reutilizable con html template -->
   <header id="navbar-container"></header>
@@ -38,150 +26,13 @@
 
 
   <navbar-component></navbar-component>
-  <!-- Componente personalizado -->
-  <testimonial-carousel></testimonial-carousel>
+  
+  <div id="app"></div>
 
-  <!-- Template -->
-  <template id="testimonialTemplate">
-    <style>
-      .carousel {
-        width: 80%;
-        /* Establece un ancho del 80% de la pantalla, puedes ajustarlo a tu preferencia */
-        height: 400px;
-        /* Establece una altura específica en píxeles, ajusta el valor según lo necesites */
+<script type="module" src="./esmodules/main.js"></script>
 
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        background-color: white;
-        padding: 2rem;
-        border-radius: 10px;
-        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-        gap: 2rem;
-        margin: 0 auto;
-        /* Centra el carrusel en la pantalla */
-      }
-
-      .image-container {
-        flex: 1;
-
-        width: 100%;
-        /* Esto hace que la imagen ocupe todo el ancho del contenedor */
-        height: auto;
-        /* Mantiene la proporción de la imagen */
-
-
-      }
-
-      .image-container img {
-        width: 100%;
-        height: auto;
-        max-width: 716px;
-        border-radius: 8px;
-        object-fit: cover;
-      }
-
-      .content-container {
-        flex: 1;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        gap: 1rem;
-      }
-
-      h3 {
-        color: #ff6f61;
-        text-transform: uppercase;
-        font-size: 14px;
-        margin: 0;
-      }
-
-      h1 {
-        font-size: 28px;
-        margin: 0;
-        color: #333;
-      }
-
-      .client-info {
-        display: flex;
-        align-items: center;
-        gap: 1rem;
-      }
-
-      .client-info img {
-        width: 50px;
-        height: 50px;
-        border-radius: 50%;
-        object-fit: cover;
-      }
-
-      .client-details {
-        font-size: 14px;
-        color: gray;
-      }
-
-      .testimonial-text {
-        font-size: 16px;
-        line-height: 1.5;
-        color: #555;
-      }
-
-      .navigation-buttons {
-        display: flex;
-        gap: 0.5rem;
-        justify-content: center;
-        margin-top: 1rem;
-      }
-
-      .nav-button {
-        width: 12px;
-        height: 12px;
-        background-color: #ddd;
-        border: none;
-        border-radius: 50%;
-        cursor: pointer;
-        transition: background-color 0.3s ease, transform 0.2s ease;
-      }
-
-      .nav-button.active {
-        background-color: #ff6f61;
-        transform: scale(1.2);
-        /* Aumenta el tamaño del botón activo */
-      }
-
-      .nav-button:hover {
-        background-color: #ff8f81;
-      }
-    </style>
-
-    <div class="carousel">
-      <div class="image-container">
-        <img id="testimonialImage" src="IPHONE.png" alt="Testimonial">
-      </div>
-      <div class="content-container">
-        <h3>Testimonios</h3>
-        <h1>Lo que dicen nuestros clientes!</h1>
-        <div class="client-info">
-          <img id="clientAvatar" src="IPHONE.png" alt="Client">
-          <div class="client-details">
-            <div id="clientName">Client Name</div>
-            <div id="clientProfession">Profession</div>
-          </div>
-        </div>
-        <p class="testimonial-text" id="testimonialText">
-          Excelente servicio y calidad.
-        </p>
-        <div class="navigation-buttons">
-          <button class="nav-button active" id="prevButton"></button>
-          <button class="nav-button" id="nextButton"></button>
-        </div>
-
-      </div>
-    </div>
-  </template>
-
-  <script src="test.js"></script>
-  <br>
+  
+  
 
   <!-- footer reutilizable con html template -->
   <div id="footer-container"></div>
